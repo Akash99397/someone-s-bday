@@ -1,0 +1,138 @@
+/* Background and Layout */
+.page-4-body {
+    background-image: url('https://res.cloudinary.com/daoqcumqm/image/upload/v1780121779/bg_rrbvsc.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #fce4ec;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.gallery-wrapper {
+    width: 90%;
+    max-width: 1100px;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.gallery-header h1 {
+    color: #880e4f;
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+}
+
+/* Grid Layout - 6 Columns as seen in image_75d897.png */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 15px;
+    margin-top: 30px;
+}
+
+/* Gift Box Slots */
+.grid-item {
+    background: white;
+    border-radius: 12px;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.grid-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.gift-emoji {
+    font-size: 2.5rem;
+}
+
+.memory-label {
+    font-size: 0.8rem;
+    color: #ad1457;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+/* Modal Styling - Split Screen */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    display: flex; /* Creates the split layout */
+    width: 85%;
+    max-width: 750px;
+    height: 350px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.modal-left {
+    flex: 1.2;
+    background-color: #f8bbd0; /* Placeholder pink like screenshot */
+}
+
+.modal-left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.modal-right {
+    flex: 1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+.modal-right h2 {
+    color: #880e4f;
+    margin-top: 0;
+}
+
+.modal-right hr {
+    border: 0;
+    border-top: 1px solid #f06292;
+    margin-bottom: 20px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px; right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #880e4f;
+    z-index: 10;
+}
+
+.final-btn {
+    position: fixed;
+    bottom: 20px; right: 20px;
+    background: #ad1457;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+}

@@ -1,0 +1,126 @@
+/* Page 2 Specific Styles */
+.page-2-body {
+    background-image: url('https://res.cloudinary.com/daoqcumqm/image/upload/v1780121779/bg_rrbvsc.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    background-color: #fce4ec; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Redundant body block removed for cleanliness, kept styles in .page-2-body */
+
+.letter .memory-box, .video-overlay, .cake-container {
+    background: rgba(255, 255, 255, 0.8); 
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.envelope-wrapper {
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.envelope-wrapper:hover {
+    transform: translateY(-10px);
+}
+
+.envelope {
+    position: relative;
+    width: 450px; /* Increased from 300px */
+    height: 300px; /* Increased from 200px */
+    background: #f06292; 
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Added shadow for the 'hovering' look */
+}
+
+.envelope .top {
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-left: 225px solid transparent; /* Half of new width */
+    border-right: 225px solid transparent; /* Half of new width */
+    border-top: 150px solid #ad1457; /* Increased height of flap */
+    transform-origin: top;
+    transition: transform 0.5s 0.3s;
+    z-index: 3;
+}
+
+.envelope .front {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 225px solid #f8bbd0; /* Half of new width */
+    border-right: 225px solid #f8bbd0; /* Half of new width */
+    border-bottom: 150px solid #f48fb1; /* Increased height of front fold */
+    z-index: 4;
+    bottom: 0;
+    border-radius: 0 0 10px 10px;
+}
+
+.letter {
+    position: absolute;
+    bottom: 5px;
+    left: 15px; /* Adjusted centering */
+    width: 420px; /* Increased from 280px */
+    height: 280px; /* Increased from 180px */
+    background: white;
+    padding: 30px; /* More padding for bigger size */
+    box-sizing: border-box;
+    transition: transform 0.5s;
+    z-index: 2;
+    overflow-y: auto;
+    border-radius: 5px;
+}
+
+.letter-text {
+    font-size: 18px; /* Increased font for bigger letter */
+    color: #880e4f;
+    line-height: 1.6;
+}
+
+/* Animation Classes */
+.envelope-wrapper.open .top {
+    transform: rotateX(180deg);
+    z-index: 1;
+}
+
+.envelope-wrapper.open .letter {
+    transform: translateY(-200px); /* Increased jump for bigger envelope */
+    height: 350px; /* Tallened letter when popped out */
+    z-index: 5;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+}
+
+/* Next Button Styling */
+#next-btn {
+    margin-top: 50px;
+    padding: 12px 25px;
+    background-color: #ad1457;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: opacity 0.5s;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.next-btn-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.next-btn-visible {
+    opacity: 1;
+    pointer-events: auto;
+}

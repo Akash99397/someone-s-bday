@@ -1,0 +1,79 @@
+/* Page 5: Video Carousel Styles */
+.page-5-body {
+    margin: 0;
+    padding: 0;
+    background-color: #000; /* Dark background so videos pop */
+    overflow: hidden;
+}
+
+.video-carousel {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory; /* This enables the "snap" effect */
+    scroll-behavior: smooth;
+}
+
+.video-section {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    scroll-snap-align: start; /* Each section snaps to the top */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+}
+
+.video-section video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Keeps the vertical video aspect ratio */
+}
+
+/* Overlay for text on top of videos */
+.video-overlay {
+    position: absolute;
+    bottom: 50px;
+    left: 20px;
+    color: white;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+    font-family: 'Segoe UI', sans-serif;
+    pointer-events: none; /* So clicks go through to the video */
+}
+
+.video-overlay h3 {
+    margin: 0;
+    font-size: 24px;
+    color: #f8bbd0; /* Soft girly pink */
+}
+
+/* Final "The End" Slide */
+.final-slide {
+    background-image: url('https://res.cloudinary.com/daoqcumqm/image/upload/v1780121779/bg_rrbvsc.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #fce4ec;
+    color: #ad1457;
+    text-align: center;
+}
+
+.end-message h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+
+
+.restart-btn {
+    padding: 15px 30px;
+    background: #ad1457;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 20px;
+}

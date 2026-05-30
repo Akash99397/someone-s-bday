@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Special Message</title>
+    <link rel="stylesheet" href="2nd.css">
+</head>
+<body class="page-2-body">
+    <div class="envelope-wrapper" onclick="openEnvelope()">
+        <div class="envelope">
+            <div class="front"></div>
+            <div class="top"></div>
+            <div class="letter">
+                <div class="letter-text">
+                    <h3>Happy Birthday! 🎂</h3>
+                    <p>
+                        <!-- Write your personal letter here -->
+                        Dear Behena,<br>
+                        Happy 15th Birthday to my Favourite sister!! Hope this new age comes with a lots of joy, happiness and fulfilled wishes. And always stay happy, jolly and blooming like this, my sunflower girlie!
+                        <br>
+                        With love,<br>
+                        Your Dada  
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="music-container" style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
+    <button id="musicBtn" onclick="toggleMusic()" style="background: rgba(255,255,255,0.7); border-radius: 50%; padding: 10px; border: none; cursor: pointer;">
+        🎵
+    </button>
+    <audio id="bgMusic" loop>
+        <source src="https://res.cloudinary.com/daoqcumqm/video/upload/v1779219233/Bairan_Animated_Love_Story___Banjaare_Official_Video_oafxkMv4xnc_ajdf4b.mp3" type="audio/mpeg">
+    </audio>
+</div>
+
+
+
+
+    <!-- This button is hidden initially -->
+    <button id="next-btn" class="next-btn-hidden" onclick="goToNextPage()">Next Page →</button>
+
+    <script src="2nd.js"></script>
+</body>
+</html>

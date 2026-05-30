@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blow the Candles!</title>
+    <link rel="stylesheet" href="3rd.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</head>
+<body class="page-3-body">
+    <div class="cake-container">
+        <h2 id="instruction">Blow into the mic to make a wish! 🎂</h2>
+        
+        <div class="cake">
+            <div class="plate"></div>
+            <div class="layer layer-bottom"></div>
+            <div class="layer layer-top"></div>
+            <div class="icing"></div>
+            <div class="drips"></div>
+            
+            <div class="candle" style="left: 100px;">
+                <div class="flame"></div>
+            </div>
+            <div class="candle" style="left: 150px;">
+                <div class="flame"></div>
+            </div>
+            <div class="candle" style="left: 200px;">
+                <div class="flame"></div>
+            </div>
+        </div>
+
+        <button id="next-btn-3" class="next-btn-hidden" onclick="goToNextPage()">Next Page →</button>
+    </div>
+
+    <div id="music-container" style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
+    <button id="musicBtn" onclick="toggleMusic()" style="background: rgba(255,255,255,0.7); border-radius: 50%; padding: 10px; border: none; cursor: pointer; font-size: 20px;">
+        🎵
+    </button>
+    <audio id="bgMusic" loop>
+        <source src="https://res.cloudinary.com/daoqcumqm/video/upload/v1779219233/Bairan_Animated_Love_Story___Banjaare_Official_Video_oafxkMv4xnc_ajdf4b.mp3" type="audio/mpeg">
+    </audio>
+</div>
+    
+
+    <script src="3rd.js"></script>
+</body>
+</html>

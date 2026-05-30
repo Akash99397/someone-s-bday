@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Surprise - Unlock</title>
+    <link rel="stylesheet" href="1st.css">
+</head>
+<body>
+    <div class="main-container">
+        <!-- Left Side: Image Box -->
+        <div class="image-section">
+            <img src="https://res.cloudinary.com/daoqcumqm/image/upload/v1780121539/pg1_mbwvc8.jpg" alt="Birthday Image" id="local-img">
+        </div>
+
+        <!-- Right Side: Dialpad Section -->
+        <div class="login-section">
+            <h2>Enter the Secret Code</h2>
+            <div class="display-container">
+                <input type="password" id="password-display" readonly placeholder="******">
+            </div>
+            
+            <div class="dialpad">
+                <button onclick="press(1)">1</button>
+                <button onclick="press(2)">2</button>
+                <button onclick="press(3)">3</button>
+                <button onclick="press(4)">4</button>
+                <button onclick="press(5)">5</button>
+                <button onclick="press(6)">6</button>
+                <button onclick="press(7)">7</button>
+                <button onclick="press(8)">8</button>
+                <button onclick="press(9)">9</button>
+                <button onclick="clearDisplay()">C</button>
+                <button onclick="press(0)">0</button>
+                <button onclick="checkPassword()" class="enter-btn">Enter</button>
+            </div>
+            <p id="message"></p>
+        </div>
+    </div>
+
+    
+    <script src="1st.js"></script>
+</body>
+</html>
